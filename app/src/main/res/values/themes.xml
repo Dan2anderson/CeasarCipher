@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Blue"  parent = "Theme.AppCompat.NoActionBar">
+        <item name="pageBackground">@style/AppTheme</item>
+    </style>
+</resources>

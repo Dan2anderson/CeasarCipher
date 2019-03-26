@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">CeasarCipher</string>
+    <string name="title_entry">Text</string>
+    <string name="title_encode">Encode</string>
+    <string name="title_decode">Decode</string>
+    <string name="enter_text">Enter Text</string>
+    <string name="positive_button_text">Granted</string>
+    <string name="cipher_explanation">If you select C, then A becomes C, B becomes D, etc. . .</string>
+    <string name="decode_explanation">Copy and past encoded text into the Home screen then click on decode</string>
+    <string name="we_need_permission">We need permission to access your contacts so that you can pick a contact to send your super secret code to.</string>
+
+
+    <string-array name="alphabet">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+</resources>

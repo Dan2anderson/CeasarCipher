@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="ScrollSelector">
+        <attr name="textDimension" format="dimension"/>
+        <attr name="buttonBackground" format="reference"/>
+        <attr name="selectableTextList"/>
+
+    </declare-styleable>
+</resources>
