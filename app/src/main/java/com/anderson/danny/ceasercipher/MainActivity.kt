@@ -35,8 +35,6 @@ class MainActivity : AppCompatActivity(),
         when (item.itemId) {
             R.id.home -> {
                 userText.isEnabled = true
-                userText.isFocusable = true
-                userText.isCursorVisible = true
                 cipherViewModel?.mode = UiState.EDIT
                 userText.setText(cipherViewModel?.getUserText())
                 @Suppress("UsePropertyAccessSyntax")
@@ -45,8 +43,6 @@ class MainActivity : AppCompatActivity(),
             }
             R.id.navigation_encode -> {
                 userText.isEnabled = false
-                userText.isFocusable = false
-                userText.isCursorVisible = false
                 cipherViewModel?.mode = UiState.ENCODE
                 userText.setText(cipherViewModel?.getModeText())
                 @Suppress("UsePropertyAccessSyntax")
@@ -55,8 +51,6 @@ class MainActivity : AppCompatActivity(),
             }
             R.id.navigation_decode -> {
                 userText.isEnabled = false
-                userText.isFocusable = false
-                userText.isCursorVisible = false
                 cipherViewModel?.mode = UiState.DECODE
                 userText.setText(cipherViewModel?.getModeText())
                 @Suppress("UsePropertyAccessSyntax")
