@@ -5,8 +5,9 @@
     <string name="title_decode">Decode</string>
     <string name="enter_text">Enter Text</string>
     <string name="positive_button_text">Granted</string>
-    <string name="cipher_explanation">If you select C, then A becomes C, B becomes D, etc. . .</string>
-    <string name="decode_explanation">Copy and past encoded text into the Home screen then click on decode</string>
+    <string name="home_explanation">Enter your message here. If you want to encode it, click encode.  If you want to decode it, tap decode. </string>
+    <string name="encode_explanation">To encode, select a letter. If you select C, then A becomes C, B becomes D, etc. . .</string>
+    <string name="decode_explanation">To decode, select the letter that was used to encode this text.</string>
     <string name="we_need_permission">We need permission to access your contacts so that you can pick a contact to send your super secret code to.</string>
 
 

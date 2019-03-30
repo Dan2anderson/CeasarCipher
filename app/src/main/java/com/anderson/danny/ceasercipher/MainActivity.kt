@@ -38,7 +38,8 @@ class MainActivity : AppCompatActivity(),
                 cipherViewModel?.mode = UiState.EDIT
                 userText.setText(cipherViewModel?.getUserText())
                 @Suppress("UsePropertyAccessSyntax")
-                explanation.setText(resources.getText(R.string.cipher_explanation))
+                explanation.setText(resources.getText(R.string.home_explanation))
+                send_fab.hide()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_encode -> {
@@ -46,7 +47,8 @@ class MainActivity : AppCompatActivity(),
                 cipherViewModel?.mode = UiState.ENCODE
                 userText.setText(cipherViewModel?.getModeText())
                 @Suppress("UsePropertyAccessSyntax")
-                explanation.setText(resources.getText(R.string.cipher_explanation))
+                explanation.setText(resources.getText(R.string.encode_explanation))
+                send_fab.show()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_decode -> {
@@ -55,6 +57,7 @@ class MainActivity : AppCompatActivity(),
                 userText.setText(cipherViewModel?.getModeText())
                 @Suppress("UsePropertyAccessSyntax")
                 explanation.setText(resources.getText(R.string.decode_explanation))
+                send_fab.hide()
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -80,6 +83,9 @@ class MainActivity : AppCompatActivity(),
         send_fab.setOnClickListener {
             selectContact()
         }
+        if(cipherViewModel?.mode != UiState.ENCODE){
+            send_fab.hide()
+        } else {send_fab.show()}
     }
 
 
@@ -145,7 +151,7 @@ class MainActivity : AppCompatActivity(),
 
     private fun sendTextIntent(number: String) {
         val intent = Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", number, null))
-        intent.putExtra("sms_body", cipherViewModel?.getModeText())
+        intent.putExtra("sms_body", "${cipherViewModel?.getEncodingLetter()} - ${cipherViewModel?.getModeText()}")
 
         startActivity(intent)
     }

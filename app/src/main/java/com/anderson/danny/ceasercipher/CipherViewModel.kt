@@ -77,6 +77,10 @@ class CipherViewModel : ViewModel() {
         }
     }
 
+    fun getEncodingLetter(): Char{
+        return cipherMapUpper['A'] ?: 'A'
+    }
+
     fun setOffset(character: Char) {
         makeMap(character.toLowerCase(), cipherMapLower, letterListLower)
         reverseCipherMapLower = reverseMap(cipherMapLower)
